@@ -1,0 +1,13 @@
+package org.xj.commons.web3j.protocol.core.method.response.starknet;
+
+import org.xj.commons.web3j.protocol.core.method.response.model.starknet.StrkBlockWithTxHashes;
+import org.web3j.protocol.core.Response;
+
+/**
+ * @author xj
+ * @version 1.0.0 createTime:  2024/3/13 14:36
+ */
+public class StrkGetBlockWithTxHashes extends Response<StrkBlockWithTxHashes> {
+
+
+}

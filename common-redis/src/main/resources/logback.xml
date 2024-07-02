@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <root level="ERROR">
+        <appender-ref ref="error"/>
+        <appender-ref ref="logfile"/>
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+</configuration>

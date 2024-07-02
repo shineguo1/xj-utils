@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.xj.commons</groupId>
+    <artifactId>common-tools</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>common-web3j</module>
+        <module>common-toolkit</module>
+        <module>common-redis</module>
+        <module>common-web3j-service</module>
+    </modules>
+
+    <properties>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+        <lombok.version>1.18.16</lombok.version>
+        <module.toolkit.version>1.0-SNAPSHOT</module.toolkit.version>
+        <module.redis.version>2.0-SNAPSHOT</module.redis.version>
+        <module.web3j.version>3.0-SNAPSHOT</module.web3j.version>
+        <module.web3j-service.version>3.0-SNAPSHOT</module.web3j-service.version>
+        <okhttp3.version>4.3.1</okhttp3.version>
+        <web3.core.version>4.9.5</web3.core.version>
+        <guava.version>27.0.1-jre</guava.version>
+        <version.redisson-start>3.17.4</version.redisson-start>
+        <version.fastjson2>2.0.24</version.fastjson2>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.xj.commons</groupId>
+                <artifactId>common-toolkit</artifactId>
+                <version>${module.toolkit.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.xj.commons</groupId>
+                <artifactId>common-web3j</artifactId>
+                <version>${module.web3j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.xj.commons</groupId>
+                <artifactId>common-redis</artifactId>
+                <version>${module.redis.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.web3j</groupId>
+                <artifactId>core</artifactId>
+                <version>${web3.core.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.squareup.okhttp3</groupId>
+                <artifactId>okhttp</artifactId>
+                <version>${okhttp3.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava.version}</version>
+            </dependency>
+
+            <!-- redisson -->
+            <dependency>
+                <groupId>org.redisson</groupId>
+                <artifactId>redisson-spring-boot-starter</artifactId>
+                <version>${version.redisson-start}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.fastjson2</groupId>
+                <artifactId>fastjson2-extension</artifactId>
+                <version>${version.fastjson2}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>
