@@ -1,9 +1,11 @@
 package org.xj.commons.web3j.req;
 
+import lombok.Setter;
 import org.web3j.abi.FunctionEncoder;
 import org.web3j.abi.datatypes.Function;
 import org.web3j.crypto.Credentials;
 import org.web3j.crypto.RawTransaction;
+import org.web3j.protocol.core.methods.request.Transaction;
 
 import java.math.BigInteger;
 
@@ -18,6 +20,7 @@ public class EthCallSendTransactionReq {
     private BigInteger value;
     private BigInteger nonce;
     private BigInteger gasPrice;
+    @Setter
     private BigInteger gasLimit;
 
     public EthCallSendTransactionReq(BigInteger nonce,
@@ -66,5 +69,21 @@ public class EthCallSendTransactionReq {
         return EthSendRawTransactionReq.create(transaction, chainId, credentials);
     }
 
+    public EthEstimateGasReq estimateGas(String from) {
+        String encodeFuncData = null;
+        if (function != null) {
+            encodeFuncData = FunctionEncoder.encode(function);
+        }
+        Transaction tx = Transaction.createFunctionCallTransaction(
+                from,
+                nonce,
+                gasPrice,
+                gasLimit,
+                to,
+                value,
+                encodeFuncData
+        );
+        return new EthEstimateGasReq(tx);
+    }
 
 }
