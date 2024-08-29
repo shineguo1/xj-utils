@@ -13,7 +13,7 @@ import java.util.Objects;
  * @version 1.0.0 createTime:  2023/2/23 10:01
  */
 @Getter
-public class EthGetCodeReq implements BatchReq, Web3BatchCmd<EthGetCode, String> {
+public class EthGetCodeReq extends BaseWeb3Cmd<EthGetCode, String> implements BatchReq, Web3BatchCmd<EthGetCode, String> {
 
     private DefaultBlockParameter block;
     private final String address;

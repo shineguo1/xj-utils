@@ -3,6 +3,7 @@ package org.xj.commons.web3j.req.ton;
 import org.xj.commons.web3j.protocol.core.JsonRpc_Ton_Web3j;
 import org.xj.commons.web3j.protocol.core.method.response.model.ton.Account;
 import org.xj.commons.web3j.protocol.core.method.response.ton.TonGetAccount;
+import org.xj.commons.web3j.req.BaseWeb3Cmd;
 import org.xj.commons.web3j.req.BatchReq;
 import org.xj.commons.web3j.req.Web3Cmd;
 import org.web3j.protocol.Web3j;
@@ -13,7 +14,7 @@ import org.web3j.protocol.core.Request;
  * @author xj
  * @version 1.0.0 createTime:  2023/12/15 15:47
  */
-public class TonGetAccountReq implements Web3Cmd<TonGetAccount, Account>, BatchReq {
+public class TonGetAccountReq extends BaseWeb3Cmd<TonGetAccount, Account> implements Web3Cmd<TonGetAccount, Account>, BatchReq {
 
     private String address;
 

@@ -11,7 +11,7 @@ import org.web3j.protocol.core.DefaultBlockParameter;
  * @author xj
  * @version 1.0.0 createTime:  2023/10/24 15:48
  */
-public class TronGetAccountReq implements Web3Cmd<TronGetAccount, TronAccount> {
+public class TronGetAccountReq extends BaseWeb3Cmd<TronGetAccount, TronAccount> implements Web3Cmd<TronGetAccount, TronAccount> {
 
     private String address;
     private boolean visible;

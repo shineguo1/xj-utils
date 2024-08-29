@@ -12,7 +12,7 @@ import java.util.Objects;
  * @author xinjie_guo
  * @version 1.0.0 createTime:  2024/7/4 18:41
  */
-public class EthGetTransactionCountReq implements BatchReq, Web3BatchCmd<EthGetTransactionCount, BigInteger> {
+public class EthGetTransactionCountReq extends BaseWeb3Cmd<EthGetTransactionCount, BigInteger> implements BatchReq, Web3BatchCmd<EthGetTransactionCount, BigInteger> {
 
     private DefaultBlockParameter block;
     private String address;

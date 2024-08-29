@@ -2,22 +2,23 @@ package org.xj.commons.web3j.req.ton;
 
 import com.alibaba.fastjson2.JSONObject;
 import com.alibaba.fastjson2.TypeReference;
+import org.web3j.protocol.Web3j;
+import org.web3j.protocol.core.DefaultBlockParameter;
+import org.web3j.protocol.core.Request;
 import org.xj.commons.web3j.abi.datatypes.ton.TonFunction;
 import org.xj.commons.web3j.protocol.core.JsonRpc_Ton_Web3j;
 import org.xj.commons.web3j.protocol.core.decompile.ton.util.StackDecoder;
 import org.xj.commons.web3j.protocol.core.method.response.model.ton.TonMethodRes;
 import org.xj.commons.web3j.protocol.core.method.response.ton.TonConsoleGetMethods;
+import org.xj.commons.web3j.req.BaseWeb3Cmd;
 import org.xj.commons.web3j.req.BatchReq;
 import org.xj.commons.web3j.req.Web3Cmd;
-import org.web3j.protocol.Web3j;
-import org.web3j.protocol.core.DefaultBlockParameter;
-import org.web3j.protocol.core.Request;
 
 /**
  * @author xj
  * @version 1.0.0 createTime:  2024/1/2 10:26
  */
-public class TonGetMethodReq<RES> implements Web3Cmd<TonConsoleGetMethods, RES>, BatchReq {
+public class TonGetMethodReq<RES> extends BaseWeb3Cmd<TonConsoleGetMethods, RES> implements Web3Cmd<TonConsoleGetMethods, RES>, BatchReq {
 
     private final String address;
     private final TonFunction<RES> function;

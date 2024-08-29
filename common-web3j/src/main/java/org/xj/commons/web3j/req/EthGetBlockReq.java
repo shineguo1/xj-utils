@@ -15,7 +15,7 @@ import java.util.Objects;
  * @version 1.0.0 createTime:  2023/2/23 10:01
  */
 @Getter
-public class EthGetBlockReq implements BatchReq, Web3BatchCmd<EthBlock, EthBlock.Block> {
+public class EthGetBlockReq extends BaseWeb3Cmd<EthBlock, EthBlock.Block> implements BatchReq, Web3BatchCmd<EthBlock, EthBlock.Block> {
 
     private DefaultBlockParameter block;
     private String blockHash;

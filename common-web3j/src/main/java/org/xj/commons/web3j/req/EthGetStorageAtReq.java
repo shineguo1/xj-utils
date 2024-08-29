@@ -13,7 +13,7 @@ import java.math.BigInteger;
  * @version 1.0.0 createTime:  2023/2/13 10:37
  */
 @Getter
-public class EthGetStorageAtReq implements BatchReq, Web3BatchCmd<EthGetStorageAt, String> {
+public class EthGetStorageAtReq extends BaseWeb3Cmd<EthGetStorageAt, String> implements BatchReq, Web3BatchCmd<EthGetStorageAt, String> {
 
     private final String contractAddress;
     private final BigInteger slot;

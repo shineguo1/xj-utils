@@ -1,19 +1,20 @@
 package org.xj.commons.web3j.req.ton;
 
-import org.xj.commons.web3j.protocol.core.JsonRpc_Ton_Web3j;
-import org.xj.commons.web3j.protocol.core.method.response.model.ton.NftCollection;
-import org.xj.commons.web3j.protocol.core.method.response.ton.TonGetNftCollection;
-import org.xj.commons.web3j.req.BatchReq;
-import org.xj.commons.web3j.req.Web3Cmd;
 import org.web3j.protocol.Web3j;
 import org.web3j.protocol.core.DefaultBlockParameter;
 import org.web3j.protocol.core.Request;
+import org.xj.commons.web3j.protocol.core.JsonRpc_Ton_Web3j;
+import org.xj.commons.web3j.protocol.core.method.response.model.ton.NftCollection;
+import org.xj.commons.web3j.protocol.core.method.response.ton.TonGetNftCollection;
+import org.xj.commons.web3j.req.BaseWeb3Cmd;
+import org.xj.commons.web3j.req.BatchReq;
+import org.xj.commons.web3j.req.Web3Cmd;
 
 /**
  * @author xj
  * @version 1.0.0 createTime:  2023/12/15 15:47
  */
-public class TonGetNftCollectionReq implements Web3Cmd<TonGetNftCollection, NftCollection>, BatchReq {
+public class TonGetNftCollectionReq extends BaseWeb3Cmd<TonGetNftCollection, NftCollection> implements Web3Cmd<TonGetNftCollection, NftCollection>, BatchReq {
 
     private String address;
 

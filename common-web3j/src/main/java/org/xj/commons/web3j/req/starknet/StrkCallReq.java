@@ -1,13 +1,5 @@
 package org.xj.commons.web3j.req.starknet;
 
-import org.xj.commons.toolkit.BigIntegerUtils;
-import org.xj.commons.web3j.Web3jUtil;
-import org.xj.commons.web3j.abi.StrkEncoder;
-import org.xj.commons.web3j.abi.StrkTypeDecoder;
-import org.xj.commons.web3j.protocol.core.JsonRpc_Starknet_Web3j;
-import org.xj.commons.web3j.protocol.core.method.response.starknet.StrkCall;
-import org.xj.commons.web3j.req.BatchReq;
-import org.xj.commons.web3j.req.Web3BatchCmd;
 import lombok.Getter;
 import org.web3j.abi.TypeReference;
 import org.web3j.abi.datatypes.Function;
@@ -15,6 +7,15 @@ import org.web3j.abi.datatypes.Type;
 import org.web3j.protocol.Web3j;
 import org.web3j.protocol.core.DefaultBlockParameter;
 import org.web3j.protocol.core.Request;
+import org.xj.commons.toolkit.BigIntegerUtils;
+import org.xj.commons.web3j.Web3jUtil;
+import org.xj.commons.web3j.abi.StrkEncoder;
+import org.xj.commons.web3j.abi.StrkTypeDecoder;
+import org.xj.commons.web3j.protocol.core.JsonRpc_Starknet_Web3j;
+import org.xj.commons.web3j.protocol.core.method.response.starknet.StrkCall;
+import org.xj.commons.web3j.req.BaseWeb3Cmd;
+import org.xj.commons.web3j.req.BatchReq;
+import org.xj.commons.web3j.req.Web3BatchCmd;
 
 import java.math.BigInteger;
 import java.util.List;
@@ -26,7 +27,7 @@ import java.util.stream.Stream;
  * @version 1.0.0 createTime:  2024/3/12 9:53
  */
 @Getter
-public class StrkCallReq implements BatchReq, Web3BatchCmd<StrkCall, Object> {
+public class StrkCallReq extends BaseWeb3Cmd<StrkCall, Object> implements BatchReq, Web3BatchCmd<StrkCall, Object> {
 
     /**
      * contract_address

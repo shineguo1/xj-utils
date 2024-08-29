@@ -14,7 +14,7 @@ import java.math.BigInteger;
  * @version 1.0.0 createTime:  2023/2/13 10:37
  */
 @Getter
-public class EthEstimateGasReq implements BatchReq, Web3BatchCmd<EthEstimateGas, BigInteger> {
+public class EthEstimateGasReq extends BaseWeb3Cmd<EthEstimateGas, BigInteger> implements BatchReq, Web3BatchCmd<EthEstimateGas, BigInteger> {
 
     private final Transaction transaction;
 

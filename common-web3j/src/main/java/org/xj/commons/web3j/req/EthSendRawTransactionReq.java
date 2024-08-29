@@ -18,10 +18,9 @@ import java.math.BigInteger;
  * @author xj
  * @version 1.0.0 createTime:  2024/7/3 11:14
  */
-public class EthSendRawTransactionReq implements BatchReq, Web3BatchCmd<EthSendTransaction, String> {
+public class EthSendRawTransactionReq extends BaseWeb3Cmd<EthSendTransaction, String> implements BatchReq, Web3BatchCmd<EthSendTransaction, String> {
 
     private final String hexValue;
-
 
     @Override
     public Request<?, EthSendTransaction> getRequest(Web3j web3j, DefaultBlockParameter defaultBlock) {

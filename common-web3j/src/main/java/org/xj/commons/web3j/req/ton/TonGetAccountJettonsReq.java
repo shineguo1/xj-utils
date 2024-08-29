@@ -4,6 +4,7 @@ import org.xj.commons.web3j.protocol.core.JsonRpc_Ton_Web3j;
 import org.xj.commons.web3j.protocol.core.method.response.model.ton.AccountJettonBalance;
 import org.xj.commons.web3j.protocol.core.method.response.model.ton.AccountJettonBalances;
 import org.xj.commons.web3j.protocol.core.method.response.ton.TonGetAccountJettons;
+import org.xj.commons.web3j.req.BaseWeb3Cmd;
 import org.xj.commons.web3j.req.BatchReq;
 import org.xj.commons.web3j.req.Web3Cmd;
 import org.web3j.protocol.Web3j;
@@ -18,7 +19,7 @@ import java.util.List;
  * @author xj
  * @version 1.0.0 createTime:  2023/12/15 15:47
  */
-public class TonGetAccountJettonsReq implements Web3Cmd<TonGetAccountJettons, AccountJettonBalances>, BatchReq {
+public class TonGetAccountJettonsReq extends BaseWeb3Cmd<TonGetAccountJettons, AccountJettonBalances> implements Web3Cmd<TonGetAccountJettons, AccountJettonBalances>, BatchReq {
 
     private String address;
     private Collection<String> currencies;

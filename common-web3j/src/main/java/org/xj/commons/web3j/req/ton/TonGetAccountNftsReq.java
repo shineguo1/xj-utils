@@ -1,23 +1,24 @@
 package org.xj.commons.web3j.req.ton;
 
-import org.xj.commons.web3j.protocol.core.JsonRpc_Ton_Web3j;
-import org.xj.commons.web3j.protocol.core.method.response.model.ton.AccountNfts;
-import org.xj.commons.web3j.protocol.core.method.response.ton.TonGetAccountNfts;
-import org.xj.commons.web3j.req.BatchReq;
-import org.xj.commons.web3j.req.Web3Cmd;
 import lombok.Data;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.web3j.protocol.Web3j;
 import org.web3j.protocol.core.DefaultBlockParameter;
 import org.web3j.protocol.core.Request;
+import org.xj.commons.web3j.protocol.core.JsonRpc_Ton_Web3j;
+import org.xj.commons.web3j.protocol.core.method.response.model.ton.AccountNfts;
+import org.xj.commons.web3j.protocol.core.method.response.ton.TonGetAccountNfts;
+import org.xj.commons.web3j.req.BaseWeb3Cmd;
+import org.xj.commons.web3j.req.BatchReq;
+import org.xj.commons.web3j.req.Web3Cmd;
 
 /**
  * @author xj
  * @version 1.0.0 createTime:  2023/12/15 15:47
  */
 @Data
-public class TonGetAccountNftsReq implements Web3Cmd<TonGetAccountNfts, AccountNfts>, BatchReq {
+public class TonGetAccountNftsReq extends BaseWeb3Cmd<TonGetAccountNfts, AccountNfts> implements Web3Cmd<TonGetAccountNfts, AccountNfts>, BatchReq {
 
     @NotNull
     private String account;

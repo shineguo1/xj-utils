@@ -1,7 +1,5 @@
 package org.xj.commons.web3j.req;
 
-import org.xj.commons.web3j.Web3jUtil;
-import org.xj.commons.web3j.abi.FunctionReturnDecoderPlus;
 import lombok.Getter;
 import org.web3j.abi.FunctionEncoder;
 import org.web3j.abi.datatypes.Function;
@@ -11,6 +9,8 @@ import org.web3j.protocol.core.DefaultBlockParameter;
 import org.web3j.protocol.core.Request;
 import org.web3j.protocol.core.methods.request.Transaction;
 import org.web3j.protocol.core.methods.response.EthCall;
+import org.xj.commons.web3j.Web3jUtil;
+import org.xj.commons.web3j.abi.FunctionReturnDecoderPlus;
 
 import java.util.List;
 
@@ -19,7 +19,7 @@ import java.util.List;
  * @version 1.0.0 createTime:  2023/2/13 10:37
  */
 @Getter
-public class EthCallReq implements BatchReq, Web3BatchCmd<EthCall, Object> {
+public class EthCallReq extends BaseWeb3Cmd<EthCall, Object> implements BatchReq, Web3BatchCmd<EthCall, Object> {
 
     private final String address;
     private final String msgSender;

@@ -198,7 +198,7 @@ public class Web3jUtil {
             newException.setStackTrace(e.getStackTrace());
             throw newException;
         }
-        return req.getResult(response);
+        return req.handleResponse(response);
     }
 
     /**
@@ -227,7 +227,7 @@ public class Web3jUtil {
         for (int i = 0; i < responses.size(); i++) {
             Web3BatchCmd req = reqList.get(i);
             Response<?> response = responses.get(i);
-            Object javaObj = req.getResult(response);
+            Object javaObj = req.handleResponse(response);
             javaObjList.add(javaObj);
         }
         return javaObjList;

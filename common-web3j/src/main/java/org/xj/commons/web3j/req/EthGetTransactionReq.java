@@ -12,7 +12,7 @@ import org.web3j.protocol.core.methods.response.Transaction;
  * @version 1.0.0 createTime:  2023/2/13 10:37
  */
 @Getter
-public class EthGetTransactionReq implements BatchReq, Web3BatchCmd<EthTransaction, Transaction>{
+public class EthGetTransactionReq extends BaseWeb3Cmd<EthTransaction, Transaction> implements BatchReq, Web3BatchCmd<EthTransaction, Transaction>{
 
     private final String transactionHash;
 

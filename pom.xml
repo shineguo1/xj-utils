@@ -24,7 +24,7 @@
         <lombok.version>1.18.16</lombok.version>
         <module.toolkit.version>1.0-SNAPSHOT</module.toolkit.version>
         <module.redis.version>2.0-SNAPSHOT</module.redis.version>
-        <module.web3j.version>3.0-SNAPSHOT</module.web3j.version>
+        <module.web3j.version>4.0-SNAPSHOT</module.web3j.version>
         <module.web3j-service.version>3.0-SNAPSHOT</module.web3j-service.version>
         <okhttp3.version>4.3.1</okhttp3.version>
         <web3.core.version>4.9.5</web3.core.version>

@@ -18,7 +18,7 @@ import java.util.Objects;
  * @version 1.0.0 createTime:  2023/2/23 10:01
  */
 @Getter
-public class EthGetBlockTimestampReq implements BatchReq, Web3BatchCmd<EthBlock, BigInteger> {
+public class EthGetBlockTimestampReq extends BaseWeb3Cmd<EthBlock, BigInteger> implements BatchReq, Web3BatchCmd<EthBlock, BigInteger> {
 
     private final EthGetBlockReq ethGetBlockReq;
 
@@ -46,6 +46,6 @@ public class EthGetBlockTimestampReq implements BatchReq, Web3BatchCmd<EthBlock,
     @Override
     public BigInteger getResult(EthBlock response) {
         return Objects.nonNull(response) && Objects.nonNull(response.getBlock()) ?
-            response.getBlock().getTimestamp() : null;
+                response.getBlock().getTimestamp() : null;
     }
 }

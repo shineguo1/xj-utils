@@ -1,21 +1,21 @@
 package org.xj.commons.web3j.req;
 
+import lombok.extern.slf4j.Slf4j;
+import org.web3j.protocol.Web3j;
+import org.web3j.protocol.core.DefaultBlockParameter;
+import org.web3j.protocol.core.Request;
 import org.xj.commons.web3j.abi.HexDecoder;
 import org.xj.commons.web3j.protocol.core.JsonRpc_Tron_Web3j;
 import org.xj.commons.web3j.protocol.core.decompile.tron.TronAddressUtils;
 import org.xj.commons.web3j.protocol.core.method.response.TronGetAssetIssue;
 import org.xj.commons.web3j.protocol.core.method.response.model.TronAssetIssue;
-import lombok.extern.slf4j.Slf4j;
-import org.web3j.protocol.Web3j;
-import org.web3j.protocol.core.DefaultBlockParameter;
-import org.web3j.protocol.core.Request;
 
 /**
  * @author xj
  * @Date 2023/11/2 14:17
  */
 @Slf4j
-public class TronGetAssetIssueByIdReq implements Web3Cmd<TronGetAssetIssue, TronAssetIssue> {
+public class TronGetAssetIssueByIdReq extends BaseWeb3Cmd<TronGetAssetIssue, TronAssetIssue> implements Web3Cmd<TronGetAssetIssue, TronAssetIssue> {
 
     private Long tokenId;
 
